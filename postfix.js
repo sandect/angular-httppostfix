@@ -2,7 +2,7 @@
 // Copyrights: Ezekiel Victor
 
 // Modifies $httpProvider for correct server communication (POST variable format)
-angular.module('httpPostFix', [], function($httpProvider)
+angular.module('httpPostFix', ["$httpProvider"], function($httpProvider)
 {
     // Use x-www-form-urlencoded Content-Type
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
